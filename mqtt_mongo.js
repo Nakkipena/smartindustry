@@ -1,12 +1,12 @@
 
 //MQTT-välityspalvelimen määrittely
 const mqtt    = require('mqtt');
-const broker = 'broker.hivemq.com';
+const broker = 'mqtt://broker.hivemq.com:1883';
 const user = '';
 const pw = ''; 
 
 //määritellään välityspalvelimen "olio"
-mq = mqtt.connect('mqtt://broker.hivemq.com:1883', {
+mq = mqtt.connect(broker, {
   'username': user,
   'password': pw
 });
