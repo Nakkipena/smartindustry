@@ -6,7 +6,7 @@ const user = '';
 const pw = ''; 
 
 //määritellään välityspalvelimen "olio"
-mq = mqtt.connect(broker, {
+mq = mqtt.connect('mqtt://broker.hivemq.com:1883', {
   'username': user,
   'password': pw
 });
