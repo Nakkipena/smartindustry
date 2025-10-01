@@ -1,7 +1,7 @@
 
 //MQTT-välityspalvelimen määrittely
 const mqtt    = require('mqtt');
-const broker = 'mqtt://test.mosquitto.org';
+const broker = 'broker.hivemq.com';
 const user = '';
 const pw = ''; 
 
@@ -12,7 +12,7 @@ mq = mqtt.connect(broker, {
 });
 
 //tilataan oikea topic
-mq.subscribe('automaatio/#');
+mq.subscribe('tatu123');
 
 //liitytään välityspalvelimeen
 mq.on('connect', function(){
@@ -23,7 +23,7 @@ mq.on('connect', function(){
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 //korvaa alla oleva URI-string omalla URI:lla (hae se Mongo Atlaksen Connect-kohdasta, lisää myös oma käyttäjätunnus ja salasana)
-const uri = "mongodb+srv://<username>:<password>@clusterxxxxx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; 
+const uri = "mongodb+srv://tattee:tattee@metropolia1.a9xme0z.mongodb.net/?retryWrites=true&w=majority&appName=Metropolia1"; 
 
 const client = new MongoClient(uri, {
   serverApi: {
